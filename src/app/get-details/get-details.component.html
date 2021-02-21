@@ -1,0 +1,29 @@
+<p>get-details works!</p>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Adress</th>
+            <th>BloodGroup</th>
+            <th>Topic</th>
+            <th>Subscription</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of Employee">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.phone}}</td>
+            <td>{{emp.adress}}</td>
+            <td>{{emp.bloodGroup}}</td>
+            <td>{{emp.topic}}</td>
+            <td>{{emp.subscription}}</td>
+            
+        </tr>
+    </tbody>
+</table>

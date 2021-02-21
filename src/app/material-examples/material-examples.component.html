@@ -1,0 +1,40 @@
+<button mat-button>Hello</button>
+<button mat-raised-button>World</button>
+<button mat-flat-button>HEllo</button>
+<button mat-stroked-button>Welcome</button>
+<button mat-icon-button>Circle</button>
+<button mat-fab>Circle </button>
+<button mat-mini-fab>Circle </button>
+<div >
+    <button mat-button color="primary">Hello</button>
+    <button mat-button color="accent">Hello</button>
+    <button mat-button color="warn">Hello</button>
+    <button mat-raised-button color="primary">Hello</button>
+    <button mat-raised-button color="accent">Hello</button>
+    <button mat-raised-button color="warn">Hello</button>
+    <button disableRipple mat-raised-button  color="warn">Hello</button>
+</div>
+<div>
+<mat-button-toggle #toggle disableRipple>Toggle</mat-button-toggle>
+{{toggle.checked}}
+</div>
+<div>
+    <mat-button-toggle-group #toggleGroup="matButtonToggleGroup">
+        <mat-button-toggle value="1">C#</mat-button-toggle>
+        <mat-button-toggle value="2">SQL</mat-button-toggle>
+        <mat-button-toggle value="3">HTML</mat-button-toggle>
+    </mat-button-toggle-group>
+    {{toggleGroup.value}}
+    <!-- For multiple values -->
+    <mat-button-toggle-group #toggleGroup1="matButtonToggleGroup" multiple>
+        <mat-button-toggle value="1">C#</mat-button-toggle>
+        <mat-button-toggle value="2">SQL</mat-button-toggle>
+        <mat-button-toggle value="3">HTML</mat-button-toggle>
+    </mat-button-toggle-group>
+    {{toggleGroup1.value}}
+</div>
+<!-- ICon -->
+<div>
+    <mat-icon>grade</mat-icon>
+    <mat-icon>account_box</mat-icon>
+</div>
