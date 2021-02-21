@@ -2,3 +2,15 @@ button
 {
     margin-right: 20px;
 }
+spa
+{
+    margin-right: 50px;
+}
+.navbar
+{
+    justify-content: space-between;
+}
+span
+{
+    padding-right: 1rem;
+}

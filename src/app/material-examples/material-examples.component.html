@@ -37,4 +37,55 @@
 <div>
     <mat-icon>grade</mat-icon>
     <mat-icon>account_box</mat-icon>
+    <mat-icon>camera_roll</mat-icon>
+    <mat-icon>camera</mat-icon>
+    <mat-icon>help</mat-icon>
 </div>
+<!-- Badges -->
+<br>
+<br>
+<div id="sp">
+    <span matBadge=10>Notifications</span>
+    <br>
+     <span matBadge=100 matBadgePosition="below before">Notifications</span>
+    <span matBadge=100 matBadgePosition="below after">Notifications</span>
+</div>
+<div>
+    <span matBadge=100 matBadgePosition="after before">Notifications</span>
+    <span matBadge=100 matBadgePosition="after after">Notifications</span>
+    <span matBadge=100 matBadgePosition="after before">Notifications</span>
+</div>
+<!-- size of badge -->
+<div>
+    <span matBadge=100 matBadgeSize="small" matBadgePosition="after before">Notifications</span>
+    <br>
+    <span matBadge=100 matBadgeSize="medium" matBadgePosition="after after">Notifications</span>
+    <hr>
+    <span matBadge=100 matBadgeSize="large" matBadgePosition="after before">Notifications</span>
+</div>
+<div>
+    <span matBadge=5 matBadgeColor="primary">Notifications</span>
+    
+    <span matBadge=5 matBadgeColor="accent">Notifications</span>
+    <span matBadge=5 matBadgeColor="warn">Notifications</span>
+    <br>
+    <span matBadge=5 matBadgeColor="warn" matBadgeOverlap=false>Notifications</span>
+</div>
+<!-- Binding values to from ts to html -->
+<div>
+    <span [matBadge]="Size" [matBadgeHidden]="Size == 110" >Notifications</span>
+</div>
+Progress Spinner 
+<mat-progress-spinner value=100></mat-progress-spinner>
+<button (click)="LoadData()">LoadData</button>
+<mat-spinner *ngIf=showspinner></mat-spinner>
+<!-- toolbar -->
+<mat-toolbar color="primary" class="navbar" > 
+    <div>Hello</div>
+    <div>
+        <span>Home</span>
+        <span>About</span>
+        <span>Services</span>
+    </div>
+</mat-toolbar>
+ 

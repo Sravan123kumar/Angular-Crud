@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./material-examples.component.css']
 })
 export class MaterialExamplesComponent implements OnInit {
-
+ Size=110;
+ showspinner=false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+  LoadData()
+  {
+    this.showspinner=true;
+    setTimeout(() => {
+      this.showspinner=false;
+    }, 3000);
   }
 
 }

@@ -8,9 +8,11 @@ import { GetDetailsComponent } from './get-details/get-details.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
 import { FormsModule } from '@angular/forms';
 import { MatSliderModule } from '@angular/material/slider';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatButtonModule} from '@angular/material/button';
 import {MatBadgeModule} from '@angular/material/badge';
 import { MatIconModule } from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar'
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { DeleteDetailsComponent } from './delete-details/delete-details.component';
 import { UpdateDetailsComponent } from './update-details/update-details.component';
@@ -37,7 +39,9 @@ import { MaterialExamplesComponent } from './material-examples/material-examples
     MatButtonModule,
     MatBadgeModule,
     MatIconModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatProgressSpinnerModule,
+    MatToolbarModule
   
   ],
   providers: [],
