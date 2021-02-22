@@ -12,12 +12,28 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatButtonModule} from '@angular/material/button';
 import {MatBadgeModule} from '@angular/material/badge';
 import { MatIconModule } from '@angular/material/icon';
-import {MatToolbarModule} from '@angular/material/toolbar'
+import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { DeleteDetailsComponent } from './delete-details/delete-details.component';
 import { UpdateDetailsComponent } from './update-details/update-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialExamplesComponent } from './material-examples/material-examples.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatListModule} from '@angular/material/list';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatCardModule} from '@angular/material/card';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +57,25 @@ import { MaterialExamplesComponent } from './material-examples/material-examples
     MatIconModule,
     MatButtonToggleModule,
     MatProgressSpinnerModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSidenavModule,
+    MatMenuModule,
+    MatListModule,
+    MatGridListModule,
+    MatExpansionModule,
+    MatCardModule,
+    MatTabsModule,
+    MatStepperModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatAutocompleteModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatDatepickerModule
+    
+    
+    
   
   ],
   providers: [],

@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class MaterialExamplesComponent implements OnInit {
  Size=110;
  showspinner=false;
+ open=false;
+ selectedvalue:string;
+ optgroupselected:string;
+ options=["Angular","C#","SQL"];
   constructor() { }
 
   ngOnInit(): void {
@@ -19,5 +23,8 @@ export class MaterialExamplesComponent implements OnInit {
       this.showspinner=false;
     }, 3000);
   }
-
+  Log(tab)
+  {
+    console.log(tab);
+  }
 }
