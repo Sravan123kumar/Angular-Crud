@@ -6,7 +6,7 @@ import { User } from '../_models/user';
   providedIn: 'root'
 })
 export class PostDetailsService {
-  url='http://localhost:51431/api/apis';
+  url='http://localhost:61195/api/Employees';
   
 
   constructor(public http:HttpClient) { }

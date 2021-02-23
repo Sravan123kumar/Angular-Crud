@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DeleteDetailsService {
- url='http://localhost:51431/api/apis/';
+ url='http://localhost:61195/api/Employees/';
   constructor(private http:HttpClient) { }
   Delete(id:number)
   {

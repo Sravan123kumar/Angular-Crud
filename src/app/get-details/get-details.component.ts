@@ -10,6 +10,8 @@ import { GetDetailsServiceService } from '../_services/get-details-service.servi
 })
 export class GetDetailsComponent implements OnInit {
 Employee:IUser[];
+firstname:any;
+p=1;
   constructor(private _service:GetDetailsServiceService) { }
 
   ngOnInit(): void {
@@ -19,6 +21,26 @@ Employee:IUser[];
   {
     return this._service.GetDetails()
               .subscribe(data=>this.Employee=data);
+  }
+  Search()
+  {
+    if(this.firstname == "")
+    {
+      this.ngOnInit();
+    }
+    else
+    {
+      this.Employee=this.Employee.filter(res=>{
+        return res.name.toLocaleLowerCase().match(this.firstname.toLocaleLowerCase());
+      });
+    }
+  }
+  key='id';
+  reverse=false;
+  sort(key)
+  {
+    this.key=key;
+    this.reverse= !this.reverse;
   }
 
 }

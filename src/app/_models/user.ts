@@ -3,7 +3,7 @@ export class User {
        public Id:number,
        public Name:string,
        public Email:string,
-       public Phone:number,
+       public Phone:string,
        public Adress:string,
        public BloodGroup:string,
        public Topic:string,

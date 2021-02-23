@@ -11,7 +11,7 @@ import { PostDetailsService } from '../_services/post-details.service';
   styleUrls: ['./post-details.component.css']
 })
 export class PostDetailsComponent implements OnInit {
-  Usermodel=new User(2,"Samantha","Samantha@gmail.com",100,"Kurnool","O+ve","Hr",true);
+  Usermodel=new User(2,"Samantha","Samantha@gmail.com","100","Kurnool","O+ve","Hr",true);
   Employees:IUser[];
   hasShow=false;
   constructor(public _service:PostDetailsService,public GetService:GetDetailsServiceService,public DeleteService:DeleteDetailsService) { }
@@ -21,7 +21,7 @@ export class PostDetailsComponent implements OnInit {
   PostEmpDetails()
   {
    console.log("Get in ts ")
-    
+ 
     return this._service.PostDetailsApi(this.Usermodel);
   }
   Show()

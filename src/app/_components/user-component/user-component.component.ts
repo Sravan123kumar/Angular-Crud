@@ -8,7 +8,7 @@ import { User } from 'src/app/_models/user';
   styleUrls: ['./user-component.component.css']
 })
 export class UserComponentComponent implements OnInit {
-  Usermodel=new User(2,"Samantha","Samantha@gmail.com",100,"Kurnool","O+ve","Hr",true);
+  Usermodel=new User(2,"Samantha","Samantha@gmail.com","100","Kurnool","O+ve","Hr",true);
   constructor() { }
 
   ngOnInit(): void {

@@ -1,0 +1,83 @@
+<p>update-details1 works!</p>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Adress</th>
+            <th>BloodGroup</th>
+            <th>Topic</th>
+            <th>Subscription</th>
+            <th>Update</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of Employee">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.phone}}</td>
+            <td>{{emp.adress}}</td>
+            <td>{{emp.bloodGroup}}</td>
+            <td>{{emp.topic}}</td>
+            <td>{{emp.subscription}}</td>
+            <td><button (click)="Update(emp.id)">Update</button></td>
+            
+        </tr>
+    </tbody>
+    </table>
+    <div *ngIf="hasform">
+        <form #user="ngForm" (ngSubmit)="UpdateForm()">
+            {{user.value | json}}
+            <br>
+            {{Usermodel | json}}
+            <div class="form-group">
+                <label>Enter a Id</label>
+                <input type="number" #id="ngModel" name="Id" [(ngModel)]="Usermodel.Id" required class="form-control">
+    
+            </div>
+            <div class="form-group">
+                <label>Enter a Name</label>
+                <input type="text" name="Name"  #name="ngModel" [(ngModel)]="Usermodel.Name" required class="form-control">
+    
+            </div>
+            <div class="form-group">
+                <label>Enter a Mail Id</label>
+                <input type="text" #email="ngModel" name="Email" [(ngModel)]="Usermodel.Email" >
+    
+    
+            </div>
+           <div class="form-group">
+               <label>Enter a phone number </label>
+               <input type="text" #phone="ngModel" name="phone" [(ngModel)]="Usermodel.Phone">
+    
+           </div>
+           <div class="form-group">
+               <label>Enter a Adress</label>
+               <input type="text" #Addres="ngModel" [(ngModel)]="Usermodel.Adress" name="Adress">
+    
+           </div>
+           <div class="form-group">
+               <label>Select a blood group</label>
+                <select class="custom-select" name="BloodGroup" #Blood="ngModel" [(ngModel)]="Usermodel.BloodGroup" >
+                    <option Selected>My Blood Group</option>
+                    <option *ngFor="let Blood of  Bloodgroup">{{Blood}}</option>
+                </select>
+           </div>
+           <div>
+               <label>Enter a profresion</label>
+               <input type="text" name="Topic" #Topic="ngModel" [(ngModel)]="Usermodel.Topic">
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" name="Subscription" #sub="ngModel" [(ngModel)]="Usermodel.Subscription" type="checkbox">
+               <label class="form-check-label">Send the update Details</label> 
+    
+           </div>
+        <button type="submit" class="btn btn-success">Submit</button> 
+        </form>
+        </div>
+      
+       

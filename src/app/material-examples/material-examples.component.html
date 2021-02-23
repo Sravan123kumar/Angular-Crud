@@ -429,7 +429,7 @@ Select  -->
             </mat-autocomplete>
         </mat-form-field>
     </form> -->
-    CheckBox and radio button
+    <!-- CheckBox and radio button
     <br>
     <mat-checkbox>
         Subscribe
@@ -451,7 +451,59 @@ Select  -->
         <mat-radio-button value="2">Angular</mat-radio-button>
         <mat-radio-button value="3">Angular</mat-radio-button>
     </mat-radio-group>
-    Data Picker 
+    Data Picker  -->
+    <!-- TOol tip import {MatTooltipModule} from '@angular/material/tooltip'; -->
+    <!-- matTooltipShowDelay is used for to show the data how many sec when mouse hover relases from  that one 
+    matTooltipHideDelay is used for to hide the data how many sec when mouse hover on that button
+    matToolTip is used to show the message when mouse hover on particular button -->
+    <button mat-raised-button color="primary" matTooltipPosition="below"  matTooltipShowDelay="2000"
+    matTooltipHideDelay="2000"
+    matTooltip="Welcome to Spsk Website">Tool Tip</button>
    
-    Date time<input type="datetime" ca>
-    Updated to git second time
+    <!-- Date time<input type="datetime" ca>
+    Updated to git second time -->
+    <!-- Snackbar:
+    import { MatSnackBar } from '@angular/material/snack-bar';
+    import in app module and .ts file 
+    constructor(private snackbar:MatSnackBar) { } -->
+    <!-- opensnackbar(message,action)
+    {
+      this.snackbar.open(message,action);
+    } -->
+    <!-- opensnackbar(message,action)
+    {
+      let snackref=this.snackbar.open(message,action,{duration:2000});
+      snackref.afterDismissed().subscribe(()=>{
+        console.log('the snack bar dismmesed')
+      });
+      snackref.onAction().subscribe(()=>
+      {
+        console.log('the snack bar action was trigged');
+      });
+    } -->
+    <!-- <button mat-raised-button color="primary" (click)="opensnackbar('item delted','Undo')">
+        delete snack bar
+    </button>
+    Dialog:: import {MatDialogModule} from '@angular/material/dialog';-->
+    <!-- and create a one component name dialog example and write some what in dialog component .html 
+    and add that component in app module and same thing in entry compnents as 
+    entryComponents:[DialogExampleComponent], -->
+    <!-- <button mat-raised-button (click)="openDialog()">
+        openDialog
+
+    </button> -->
+    <!-- Datatable:import {MatTableModule} from '@angular/material/table'; -->
+    <!-- <button mat-raised-button (click)="addColumn()"> Add column </button>
+    <button mat-raised-button (click)="removeColumn()"> Remove column </button>
+    <button mat-raised-button (click)="shuffle()"> Shuffle </button> -->
+    
+    <!-- <table mat-table [dataSource]="data" class="mat-elevation-z8">
+      <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+        <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+        <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+    </table> -->
+    

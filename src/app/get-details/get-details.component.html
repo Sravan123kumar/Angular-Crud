@@ -1,20 +1,24 @@
-<p>get-details works!</p>
+<nav class="nav-bar">
+        <input type="text" class="formcontrol" name="firstname" [(ngModel)]="firstname" (ngModelChange)="Search()"
+        placeholder="Enter the first name">
+    
+    </nav>
 <table border="1">
     <thead>
         <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Adress</th>
-            <th>BloodGroup</th>
-            <th>Topic</th>
-            <th>Subscription</th>
+            <th (click)="sort('id')">Id&nbsp; <i class="fa fa-sort"></i></th>
+            <th (click)="sort('name')">Name</th>
+            <th (click)="sort('email')">Email</th>
+            <th (click)="sort('phone')">Phone</th>
+            <th (click)="sort('adress')">Adress</th>
+            <th (click)="sort('bloodGroup')">BloodGroup</th>
+            <th (click)="sort('topic')">Topic</th>
+            <th (click)="sort('subscription')">Subscription</th>
         </tr>
 
     </thead>
     <tbody>
-        <tr *ngFor="let emp of Employee">
+        <tr *ngFor="let emp of Employee | orderBy: key:reverse | paginate : {itemsPerPage:2,currentPage:p}">
             <td>{{emp.id}}</td>
             <td>{{emp.name}}</td>
             <td>{{emp.email}}</td>
@@ -26,4 +30,5 @@
             
         </tr>
     </tbody>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </table>

@@ -9,7 +9,7 @@ import { User } from '../_models/user';
 })
 export class GetDetailsServiceService {
 
-  url:string="http://localhost:51431/api/apis";
+  url:string="http://localhost:61195/api/Employees";
   
   constructor(public http:HttpClient) { }
   GetDetails():Observable<IUser[]>

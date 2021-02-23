@@ -33,6 +33,20 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogExampleComponent } from './dialog-example/dialog-example.component';
+import {MatTableModule} from '@angular/material/table';
+import { JwPaginationModule } from 'jw-angular-pagination';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { Ng2OrderModule } from 'ng2-order-pipe';
+import { XyzComponent} from './xyz/xyz.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { PaginationExampleComponent } from './pagination-example/pagination-example.component';
+import { UpdateDetails1Component } from './update-details1/update-details1.component';
+
+
 
 
 @NgModule({
@@ -43,8 +57,17 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     PostDetailsComponent,
     DeleteDetailsComponent,
     UpdateDetailsComponent,
-    MaterialExamplesComponent
+    MaterialExamplesComponent,
+    DialogExampleComponent,
+    XyzComponent,
+    PaginationExampleComponent,
+    UpdateDetails1Component
+    
+   
+   
+    
   ],
+  entryComponents:[DialogExampleComponent,XyzComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -55,6 +78,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatButtonModule,
     MatBadgeModule,
     MatIconModule,
+    Ng2SearchPipeModule,
+    Ng2OrderModule,
     MatButtonToggleModule,
     MatProgressSpinnerModule,
     MatToolbarModule,
@@ -72,7 +97,14 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatAutocompleteModule,
     MatCheckboxModule,
     MatRadioModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatTooltipModule,
+    MatSnackBarModule,
+    NgxPaginationModule,
+    MatDialogModule,
+    MatTableModule,
+    
+    JwPaginationModule
     
     
     
